@@ -11,7 +11,8 @@ namespace DomMezonin.DomainModel.Entity
     /// </summary>
     public enum PayMethod
     {
-        Cash,
+        Cash, 
         CreditCard
+        
     }
 }

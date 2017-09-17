@@ -78,6 +78,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -202,6 +206,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\images\bg.png" />
+    <Content Include="Content\images\Categories\ChinaLamps\lamp1.jpg" />
+    <Content Include="Content\images\Categories\ChinaLamps\lamp3.jpg" />
+    <Content Include="Content\images\Categories\ChinaLamps\lamp2.jpg" />
+    <Content Include="Content\images\Categories\RetroLamps\lamp1.jpg" />
+    <Content Include="Content\images\Categories\RetroLamps\lamp2.jpg" />
+    <Content Include="Content\images\Categories\SimpleLamps\lamp1.jpg" />
+    <Content Include="Content\images\Categories\SimpleLamps\lamp2.jpg" />
+    <Content Include="Content\images\Categories\SimpleLamps\lamp3.jpg" />
+    <Content Include="Content\images\Categories\RetroLamps\lamp3.jpg" />
     <Content Include="Content\images\logo.png" />
     <Content Include="Content\images\phone-icon.png" />
     <Content Include="Content\images\Shopping Bag.png" />
@@ -243,6 +256,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Products.cshtml" />
+    <Content Include="Views\Home\Category.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

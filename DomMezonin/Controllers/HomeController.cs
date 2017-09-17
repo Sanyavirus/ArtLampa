@@ -10,6 +10,19 @@ namespace DomMezonin.Controllers
 {
     public class HomeController : Controller
     {
+        private RepositoryContext repositoryContext;
+        private IRepository<Product> productRepository;
+        private IRepository<Category> categoryRepository;
+        private IRepository<Image> imagesRepository;
+
+        public HomeController()
+        {
+            repositoryContext = new RepositoryContext();
+            productRepository = new ProductRepository(repositoryContext);
+            categoryRepository = new CategoryRepository(repositoryContext);
+            imagesRepository = new ImagesRepository(repositoryContext);
+        }
+
         public ActionResult Index()
         {
             return View();
@@ -17,10 +30,19 @@ namespace DomMezonin.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Title = "Арт Лампа! чудо лампы для вашего дома";
-            ViewBag.Message = DateTime.Now.ToLongTimeString();
-
             return View();
+        }
+
+        [HttpGet]
+        public ActionResult Category()
+        {
+            return View();
+        }
+
+        public JsonResult GetCategory()
+        {
+            IDictionary<string, Category> categories = categoryRepository.GetEntities().ToDictionary(p => p.Id.ToString(), v => v);
+            return Json(categories, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult Contact()

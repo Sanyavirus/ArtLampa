@@ -5,6 +5,7 @@
     <title>art-lampa</title>
     <link rel="stylesheet" href="~/Content/css/main.css">
     <link rel="stylesheet" href="~/Content/css/reset.css">
+    @Scripts.Render("~/bundles/jquery")
 </head>
 <body>
     <div id="main">
@@ -13,7 +14,7 @@
         </div>
         <div id="body">
             <div id="content">
-                @RenderBody()
+              @RenderBody()
             </div>
             <div id="footer"></div>
 
@@ -26,7 +27,7 @@
                 <div id="menu-up">
                     <ul>
                         <li><a href="/Home/Index" class="menu-up-link">Главная</a></li>
-                        <li><a href="#" class="menu-up-link">Каталог</a></li>
+                        <li><a href="/Home/Category" class="menu-up-link">Каталог</a></li>
                         <li><a href="#" class="menu-up-link">Доставка и оплата</a></li>
                         <li><a href="/Home/Contact" class="menu-up-link">Контакты</a></li>
                         <li><a href="/Home/About" class="menu-up-link">О нас</a></li>

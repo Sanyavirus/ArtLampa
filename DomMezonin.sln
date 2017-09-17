@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomMezonin", "DomMezonin\Do
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomMezonin.DomainModel", "DomMezonin.DomainModel\DomMezonin.DomainModel.csproj", "{7A5C9EDF-4DAD-4C14-870D-CB3FE6A07044}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomMezonin.Test", "DomMezonin.Test\DomMezonin.Test.csproj", "{FD7F638E-0D0A-40DB-861D-5DEA2974F19A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomMezonin.UnitTest", "DomMezonin.UnitTest\DomMezonin.UnitTest.csproj", "{EB00279B-CAA0-455D-AA42-A883FF3D3573}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{7A5C9EDF-4DAD-4C14-870D-CB3FE6A07044}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A5C9EDF-4DAD-4C14-870D-CB3FE6A07044}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A5C9EDF-4DAD-4C14-870D-CB3FE6A07044}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD7F638E-0D0A-40DB-861D-5DEA2974F19A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD7F638E-0D0A-40DB-861D-5DEA2974F19A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD7F638E-0D0A-40DB-861D-5DEA2974F19A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD7F638E-0D0A-40DB-861D-5DEA2974F19A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB00279B-CAA0-455D-AA42-A883FF3D3573}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB00279B-CAA0-455D-AA42-A883FF3D3573}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB00279B-CAA0-455D-AA42-A883FF3D3573}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB00279B-CAA0-455D-AA42-A883FF3D3573}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
