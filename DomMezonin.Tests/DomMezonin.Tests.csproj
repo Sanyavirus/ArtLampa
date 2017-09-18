@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7A5C9EDF-4DAD-4C14-870D-CB3FE6A07044}</ProjectGuid>
+    <ProjectGuid>{76AD330E-CAC6-4A14-B0CB-E76C8DD42447}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DomMezonin.DomainModel</RootNamespace>
-    <AssemblyName>DomMezonin.DomainModel</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>DomMezonin.Tests</RootNamespace>
+    <AssemblyName>DomMezonin.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,9 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,26 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entity\AdditionalProductParams.cs" />
-    <Compile Include="Entity\Category.cs" />
-    <Compile Include="Entity\EnityBaseNamed.cs" />
-    <Compile Include="Entity\EntityBase.cs" />
-    <Compile Include="Entity\Image.cs" />
-    <Compile Include="Entity\OrderDetails.cs" />
-    <Compile Include="Entity\Orders.cs" />
-    <Compile Include="Entity\PayMethod.cs" />
-    <Compile Include="Entity\Product.cs" />
-    <Compile Include="Repository\BaseRepository.cs" />
-    <Compile Include="Repository\ProductRepository.cs" />
-    <Compile Include="Repository\RepositoryContext.cs" />
-    <Compile Include="Repository\SpecialSearchParameters.cs" />
-    <Compile Include="Entity\User.cs" />
-    <Compile Include="PaySystem\IPaySystem.cs" />
+    <Compile Include="Controllers\Home_Controller_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\FakeRepository.cs" />
-    <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Repository\ProductRepositoryTest.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

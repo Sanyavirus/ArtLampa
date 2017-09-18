@@ -1,19 +1,20 @@
 ﻿using System.Collections.Generic;
 using DomMezonin.DomainModel.Entity;
+using System;
 
 namespace DomMezonin.DomainModel.Repository
 {
-    public interface IRepository<TEntity>
+    public interface IRepository<TEntity>  : IDisposable
         where TEntity : EntityBase
     {
         TEntity GetEntityById(long id);
         IList<TEntity> GetEntities();
         IList<TEntity> GetEntities(SpecialSearchParameters searchParameters);
-        bool CreateEntity(EntityBase entity);
-        bool UpdateEntity(EntityBase entity);
-        bool DeleteEntity(EntityBase entity);
-        bool CreateEntities(IEnumerable<EntityBase> entity);
-        bool UpdateEntities(IEnumerable<EntityBase> entity);
-        bool DeleteEntities(IEnumerable<EntityBase> entity);
+        bool CreateEntity(TEntity entity);
+        bool UpdateEntity(TEntity entity);
+        bool DeleteEntity(TEntity entity);
+        bool CreateEntities(IEnumerable<TEntity> entity);
+        bool UpdateEntities(IEnumerable<TEntity> entity);
+        bool DeleteEntities(IEnumerable<TEntity> entity);
     }
 }
