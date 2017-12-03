@@ -8,50 +8,52 @@ using DomMezonin.DomainModel.Entity;
 
 namespace DomMezonin.DomainModel.Repository
 {
-    public class RepositoryBase<TEntity> : IRepository<TEntity>
-        where TEntity : EntityBaseNamed
+    public abstract class RepositoryBase<TEntity>
+        where TEntity : EntityBase
     {
-        public TEntity GetEntityById(int id)
+        protected RepositoryContext repositoryContext;
+
+        public virtual TEntity GetEntityById(int id)
+        {
+
+        }
+
+        public virtual IList<TEntity> GetEntities()
         {
             throw new NotImplementedException();
         }
 
-        public IList<TEntity> GetEntities()
+        public virtual IList<TEntity> GetEntities(SpecialSearchParameters searchParameters)
         {
             throw new NotImplementedException();
         }
 
-        public IList<TEntity> GetEntities(SpecialSearchParameters searchParameters)
+        public virtual bool CreateEntity(TEntity entity)
         {
             throw new NotImplementedException();
         }
 
-        public bool CreateEntity(TEntity entity)
+        public virtual bool UpdateEntity(TEntity entity)
         {
             throw new NotImplementedException();
         }
 
-        public bool UpdateEntity(TEntity entity)
+        public virtual bool DeleteEntity(TEntity entity)
         {
             throw new NotImplementedException();
         }
 
-        public bool DeleteEntity(TEntity entity)
+        public virtual bool CreateEntities(IEnumerable<TEntity> entity)
         {
             throw new NotImplementedException();
         }
 
-        public bool CreateEntities(IEnumerable<TEntity> entity)
+        public virtual bool UpdateEntities(IEnumerable<TEntity> entity)
         {
             throw new NotImplementedException();
         }
 
-        public bool UpdateEntities(IEnumerable<TEntity> entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool DeleteEntities(IEnumerable<TEntity> entity)
+        public virtual bool DeleteEntities(IEnumerable<TEntity> entity)
         {
             throw new NotImplementedException();
         }

@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entity\AdditionalProductParams.cs" />
+    <Compile Include="Entity\Discount.cs" />
     <Compile Include="Entity\Category.cs" />
     <Compile Include="Entity\EnityBaseNamed.cs" />
     <Compile Include="Entity\EntityBase.cs" />
@@ -59,7 +60,7 @@
     <Compile Include="Entity\Orders.cs" />
     <Compile Include="Entity\PayMethod.cs" />
     <Compile Include="Entity\Product.cs" />
-    <Compile Include="Entity\Vendors.cs" />
+    <Compile Include="Entity\Vendor.cs" />
     <Compile Include="Partners\IPartner.cs" />
     <Compile Include="Repository\CategoryRepository.cs" />
     <Compile Include="Repository\ImagesRepository.cs" />

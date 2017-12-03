@@ -28,7 +28,9 @@ namespace DomMezonin.UnitTest
         public void Test_Base_Repository_GetSomeEntity()
         {
             Mock<IRepository<EntityBaseNamed>> mock = new Mock<IRepository<EntityBaseNamed>>();
-           // mock.Setup(m => m.GetEntities()).Returns(testEntitites);
+            mock.Setup(m => m.GetEntities()).Returns(testEntitites);
+            var test = mock.Object.GetEntities();
+            Assert.AreEqual(5, test.Count);
         }
     }
 }

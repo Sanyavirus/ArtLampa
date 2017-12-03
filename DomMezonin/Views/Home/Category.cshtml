@@ -18,7 +18,9 @@
         for (key in data) {
             $("#categories").append('<img src="' + '/Content/' + data[key].Image.Path + '"' + '/>');
             $("#categories").append('<p>'  + data[key].Name  + '</p>');
-            $("#categories").append('<p>'  + data[key].Description + '</p>');
+            $("#categories").append('<p>' + data[key].Description + '</p>');
+            $("#categories").append('<a href="/Product/GetProduct/' + data[key] + '"</p>');
+
         }
     }
         

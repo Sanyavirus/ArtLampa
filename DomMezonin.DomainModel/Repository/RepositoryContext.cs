@@ -16,6 +16,15 @@ namespace DomMezonin.DomainModel.Repository
         private IList<OrderDetails> orderDetailses;
         private IList<Orders> Orderss;
 
+        private Dictionary<string, Category> categoriesCollection = new Dictionary<string, Category>();
+        private Dictionary<string, Product> productsCollection;
+        private Dictionary<string, Image> imagesCollection;
+        private Dictionary<string, OrderDetails> orderDetailsCollection;
+        private Dictionary<string, Orders> ordersCollection;
+        private Dictionary<string, Vendor> vendorCollection;
+
+        private Dictionary<Type, Dictionary<string, EntityBase>> collections;
+
         #endregion
 
         #region Public Ctors
@@ -23,6 +32,9 @@ namespace DomMezonin.DomainModel.Repository
         public RepositoryContext()
         {
             InitializeContainers();
+
+            DictionaryAddCollections(categoriesCollection.GetType(), categoriesCollection);
+
         }
 
         #endregion
@@ -264,6 +276,20 @@ namespace DomMezonin.DomainModel.Repository
         }
 
         #endregion
+
+        public void DictionaryAddCollections<T>(Type key, Dictionary<string, T> dict)
+            where T : EntityBase
+        {
+            Dictionary<string, EntityBaseNamed> d = null;
+            d.Add("1", new Category());
+        } 
+
+        public Dictionary<string, EntityBase> GetCollectionByType<T>()
+        {
+            Type t = typeof (T);
+
+            return collections[t];
+        }
 
         public IList<Category> GetCategories()
         {

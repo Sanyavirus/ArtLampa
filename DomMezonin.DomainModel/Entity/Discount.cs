@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace DomMezonin.DomainModel.Entity
 {
-    /// <summary>
-    /// Способ оплаты
-    /// </summary>
-    public enum PayMethod
+    public class Discount : EntityBaseNamed
     {
-        Cash, 
-        CreditCard
+        public decimal PriceFactor { get; set; }
+
     }
 }
