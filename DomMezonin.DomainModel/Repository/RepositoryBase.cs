@@ -15,7 +15,7 @@ namespace DomMezonin.DomainModel.Repository
 
         public virtual TEntity GetEntityById(int id)
         {
-
+            return null;
         }
 
         public virtual IList<TEntity> GetEntities()
