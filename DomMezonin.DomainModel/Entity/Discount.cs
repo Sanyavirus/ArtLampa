@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace DomMezonin.DomainModel.Entity
 {
-    public class AdditionalProductParams
+    public class Discount : EntityBaseNamed
     {
+        public decimal PriceFactor { get; set; }
 
     }
 }

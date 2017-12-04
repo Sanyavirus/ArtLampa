@@ -7,7 +7,7 @@ namespace DomMezonin.DomainModel.Repository
     public interface IRepository<TEntity>  : IDisposable
         where TEntity : EntityBase
     {
-        TEntity GetEntityById(long id);
+        TEntity GetEntityById(int id);
         IList<TEntity> GetEntities();
         IList<TEntity> GetEntities(SpecialSearchParameters searchParameters);
         bool CreateEntity(TEntity entity);
@@ -18,3 +18,5 @@ namespace DomMezonin.DomainModel.Repository
         bool DeleteEntities(IEnumerable<TEntity> entity);
     }
 }
+
+

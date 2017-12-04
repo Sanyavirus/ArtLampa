@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DomMezonin.DomainModel.Entity
+namespace DomMezonin.Test
 {
-    public class AdditionalProductParams
+    class Program
     {
+        static void Main(string[] args)
+        {
 
+        }
     }
 }

@@ -3,14 +3,13 @@ using DomMezonin.DomainModel.Entity;
 
 namespace DomMezonin.DomainModel.Repository
 {
-    public class ProductRepository : RepositoryBase<Product>
+    public class CategoryRepository : RepositoryBase<Category>
     {
         private RepositoryContext context;
 
-        public ProductRepository(RepositoryContext context)
+        public CategoryRepository(RepositoryContext context)
         {
             this.context = context;
         }
-        
     }
 }
