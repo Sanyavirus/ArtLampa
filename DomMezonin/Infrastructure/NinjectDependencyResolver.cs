@@ -16,6 +16,7 @@ namespace DomMezonin.Infrastructure
         private void AddBindings()
         {
             kernel.Bind<DbContext>().To<ArtLampaContext>().InSingletonScope();
+            kernel.Bind<RepositoryBase<Product>>().To<ProductRepository>();
         }
 
         public NinjectDependencyResolver(IKernel kernel)

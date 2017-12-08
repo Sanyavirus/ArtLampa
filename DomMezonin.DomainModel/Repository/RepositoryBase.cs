@@ -21,7 +21,7 @@ namespace DomMezonin.DomainModel.Repository
             this.dbContext = dbContext;
             entitySet = dbContext.Set<TEntity>();
         }
-
+            
         public virtual TEntity GetEntity(long id)
         {
             return entitySet.FirstOrDefault(e => e.Id == id);
