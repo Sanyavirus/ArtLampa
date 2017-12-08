@@ -13,7 +13,6 @@ namespace DomMezonin.Controllers
         private RepositoryContext repositoryContext;
         private RepositoryBase<Product> productRepository;
         private RepositoryBase<Category> categoryRepository;
-        private RepositoryBase<Image> imagesRepository;
 
         public HomeController()
         {
