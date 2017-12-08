@@ -14,9 +14,9 @@ namespace DomMezonin.DomainModel.Services
         {
         }
 
-        public IQueryable<Product> GetProductsByParameters(Product )
-        {
+        //public IQueryable<Product> GetProductsByParameters(Product )
+        //{
 
-        }
+        //}
     }
 }

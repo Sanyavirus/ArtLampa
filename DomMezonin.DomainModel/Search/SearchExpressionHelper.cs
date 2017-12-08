@@ -18,7 +18,7 @@ namespace DomMezonin.DomainModel.Search
 
             if (psp.dateTo != null)
             {
-                temp = p => temp(p) && p.DateAdd <= psp.dateTo; 
+                temp = p => temp(p) || p.DateAdd <= psp.dateTo; 
             }
 
             return result;
