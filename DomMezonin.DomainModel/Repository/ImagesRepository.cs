@@ -1,15 +1,13 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity;
 using DomMezonin.DomainModel.Entity;
 
 namespace DomMezonin.DomainModel.Repository
 {
     public class ImagesRepository : RepositoryBase<Image>
     {
-        private RepositoryContext context;
-        public ImagesRepository(RepositoryContext context)
+        public ImagesRepository(DbContext dbContext) : base(dbContext)
         {
-            this.context = context;
         }
-        
     }
 }

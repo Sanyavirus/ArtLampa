@@ -17,6 +17,5 @@ namespace DomMezonin.DomainModel.DataBase
         public DbSet<Category> Categories { get; set; }
         public DbSet<Image> Images { get; set; }
 
-
     }
 }

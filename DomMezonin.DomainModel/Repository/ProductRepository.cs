@@ -1,16 +1,15 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity;
 using DomMezonin.DomainModel.Entity;
 
 namespace DomMezonin.DomainModel.Repository
 {
     public class ProductRepository : RepositoryBase<Product>
     {
-        private RepositoryContext context;
 
-        public ProductRepository(RepositoryContext context)
+        public ProductRepository(DbContext dbContext) : base(dbContext)
         {
-            this.context = context;
+
         }
-        
     }
 }

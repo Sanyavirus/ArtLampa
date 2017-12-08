@@ -32,9 +32,6 @@ namespace DomMezonin.DomainModel.Repository
         public RepositoryContext()
         {
             InitializeContainers();
-
-            DictionaryAddCollections(categoriesCollection.GetType(), categoriesCollection);
-
         }
 
         #endregion
@@ -122,7 +119,6 @@ namespace DomMezonin.DomainModel.Repository
                 ParentCategory = null,
                 Image = images[0]
             });
-
             categories.Add(new Category
             {
                 Name = "Китайские лампы",
@@ -131,7 +127,6 @@ namespace DomMezonin.DomainModel.Repository
                 ParentCategory = null,
                 Image = images[3]
             });
-
             categories.Add(new Category
             {
                 Name = "Ретро лампы",
@@ -277,12 +272,12 @@ namespace DomMezonin.DomainModel.Repository
 
         #endregion
 
-        public void DictionaryAddCollections<T>(Type key, Dictionary<string, T> dict)
-            where T : EntityBase
-        {
-            Dictionary<string, EntityBaseNamed> d = null;
-            d.Add("1", new Category());
-        } 
+        //public void DictionaryAddCollections<T>(Type key, Dictionary<string, T> dict)
+        //    where T : EntityBase
+        //{
+        //    Dictionary<string, EntityBaseNamed> d = null;
+        //    d.Add("1", new Category());
+        //} 
 
         public Dictionary<string, EntityBase> GetCollectionByType<T>()
         {

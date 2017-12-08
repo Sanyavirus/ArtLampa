@@ -1,48 +1,14 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <title>art-lampa</title>
     <link rel="stylesheet" href="~/Content/css/main.css">
     <link rel="stylesheet" href="~/Content/css/reset.css">
-    @Scripts.Render("~/bundles/jquery")
 </head>
 <body>
-    <div id="main">
-        <div id="bacground">
-            <div class="slogan"><p align="center">Мы наполним вашу жизнь стильным светом</p></div>
-        </div>
-        <div id="body">
-            <div id="content">
-              @RenderBody()
-            </div>
-            <div id="footer"></div>
-
-        </div>
-        <div id="header">
-            <div id="logo">
-                <a href="/Home/Index"> <img src="~/Content/images/logo.png" alt="logo" > </a>
-            </div>
-            <div id="menu">
-                <div id="menu-up">
-                    <ul>
-                        <li><a href="/Home/Index" class="menu-up-link">Главная</a></li>
-                        <li><a href="/Home/Category" class="menu-up-link">Каталог</a></li>
-                        <li><a href="#" class="menu-up-link">Доставка и оплата</a></li>
-                        <li><a href="/Home/Contact" class="menu-up-link">Контакты</a></li>
-                        <li><a href="/Home/About" class="menu-up-link">О нас</a></li>
-                    </ul>
-                </div>
-                <div id="menu-down">
-                    <ul>
-                        <li><a href="#" class="menu-down-link">вход</a></li>
-                        <li><a href="#" class="menu-down-link">регистрация</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    @RenderBody()
 </body>
 
 </html>

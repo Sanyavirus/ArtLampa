@@ -1,15 +1,13 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity;
 using DomMezonin.DomainModel.Entity;
 
 namespace DomMezonin.DomainModel.Repository
 {
     public class CategoryRepository : RepositoryBase<Category>
     {
-        private RepositoryContext context;
-
-        public CategoryRepository(RepositoryContext context)
+        public CategoryRepository(DbContext dbContext) : base(dbContext)
         {
-            this.context = context;
         }
     }
 }

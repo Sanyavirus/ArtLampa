@@ -62,17 +62,23 @@
     <Compile Include="Entity\PayMethod.cs" />
     <Compile Include="Entity\Product.cs" />
     <Compile Include="Entity\Vendor.cs" />
+    <Compile Include="Helpers\DiscountHelper.cs" />
     <Compile Include="Partners\IPartner.cs" />
     <Compile Include="Repository\CategoryRepository.cs" />
     <Compile Include="Repository\ImagesRepository.cs" />
     <Compile Include="Repository\ProductRepository.cs" />
     <Compile Include="Repository\RepositoryBase.cs" />
     <Compile Include="Repository\RepositoryContext.cs" />
-    <Compile Include="Repository\SpecialSearchParameters.cs" />
     <Compile Include="Entity\User.cs" />
     <Compile Include="PaySystem\IPaySystem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Search\ProductSearchParameters.cs" />
+    <Compile Include="Search\SearchExpressionHelper.cs" />
+    <Compile Include="Search\SearchParameters.cs" />
+    <Compile Include="Services\BaseService.cs" />
+    <Compile Include="Services\IService.cs" />
+    <Compile Include="Services\ProductService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

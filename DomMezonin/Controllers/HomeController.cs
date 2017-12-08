@@ -17,11 +17,8 @@ namespace DomMezonin.Controllers
 
         public HomeController()
         {
-            repositoryContext = new RepositoryContext();
-            productRepository = new ProductRepository(repositoryContext);
-            categoryRepository = new CategoryRepository(repositoryContext);
-            imagesRepository = new ImagesRepository(repositoryContext);
-        }
+
+          }
 
         public ActionResult Index()
         {
@@ -41,8 +38,9 @@ namespace DomMezonin.Controllers
 
         public JsonResult GetCategory()
         {
-            IDictionary<string, Category> categories = categoryRepository.GetEntities().ToDictionary(p => p.Id.ToString(), v => v);
-            return Json(categories, JsonRequestBehavior.AllowGet);
+            //IDictionary<string, Category> categories = categoryRepository.GetEntities().ToDictionary(p => p.Id.ToString(), v => v);
+            //return Json(categories, JsonRequestBehavior.AllowGet);
+            return null;
         }
 
         public ActionResult Contact()

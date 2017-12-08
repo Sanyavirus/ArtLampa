@@ -19,11 +19,11 @@ namespace DomMezonin
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            using (ArtLampaContext ctx = new ArtLampaContext())
-            {
-                ctx.Images.Add(new Image() { Height = 400, Width = 400, Path = "newpath.jpg" });
-                ctx.SaveChanges();
-            }
+            //using (ArtLampaContext ctx = new ArtLampaContext())
+            //{
+            //    ctx.Images.Add(new Image() { Height = 400, Width = 400, Path = "newpath.jpg" });
+            //    ctx.SaveChanges();
+            //}
         }
     }
 }

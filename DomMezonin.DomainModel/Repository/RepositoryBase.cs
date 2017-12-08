@@ -5,57 +5,57 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DomMezonin.DomainModel.Entity;
+using System.Data.Entity;
+using System.Linq.Expressions;
 
 namespace DomMezonin.DomainModel.Repository
 {
     public abstract class RepositoryBase<TEntity>
         where TEntity : EntityBase
     {
-        protected RepositoryContext repositoryContext;
-
-        public virtual TEntity GetEntityById(int id)
+        DbContext dbContext;
+        DbSet<TEntity> entitySet;
+        
+        public RepositoryBase(DbContext dbContext)
         {
-            return null;
+            this.dbContext = dbContext;
+            entitySet = dbContext.Set<TEntity>();
         }
 
-        public virtual IList<TEntity> GetEntities()
+        public virtual TEntity GetEntity(long id)
         {
-            throw new NotImplementedException();
+            return entitySet.FirstOrDefault(e => e.Id == id);
         }
 
-        public virtual IList<TEntity> GetEntities(SpecialSearchParameters searchParameters)
+        public virtual IQueryable<TEntity> GetEntities(Expression<Func<TEntity, bool>> expr)
         {
-            throw new NotImplementedException();
+            return entitySet.Where(expr);
         }
 
-        public virtual bool CreateEntity(TEntity entity)
+        public virtual IQueryable<TEntity> GetEntities()
         {
-            throw new NotImplementedException();
+            return entitySet.AsQueryable();
         }
 
-        public virtual bool UpdateEntity(TEntity entity)
+        public virtual int CreateEntity(TEntity entity)
         {
-            throw new NotImplementedException();
+            entitySet.Add(entity);
+            return dbContext.SaveChanges();
         }
 
-        public virtual bool DeleteEntity(TEntity entity)
+        public virtual int UpdateEntity(TEntity entity)
         {
-            throw new NotImplementedException();
+            entitySet.Attach(entity);
+            dbContext.Entry(entity).State = EntityState.Modified;
+            return dbContext.SaveChanges();
         }
 
-        public virtual bool CreateEntities(IEnumerable<TEntity> entity)
+        public virtual int DeleteEntity(TEntity entity)
         {
-            throw new NotImplementedException();
+            entitySet.Remove(entity);
+            return dbContext.SaveChanges();
+          
         }
-
-        public virtual bool UpdateEntities(IEnumerable<TEntity> entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public virtual bool DeleteEntities(IEnumerable<TEntity> entity)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }
