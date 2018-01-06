@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DomMezonin.DomainModel.DataBase;
+using DomMezonin.DomainModel.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,6 +18,12 @@ namespace DomMezonin
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            //using (ArtLampaContext ctx = new ArtLampaContext())
+            //{
+            //    ctx.Images.Add(new Image() { Height = 400, Width = 400, Path = "newpath.jpg" });
+            //    ctx.SaveChanges();
+            //}
         }
     }
 }
